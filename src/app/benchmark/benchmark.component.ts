@@ -1,11 +1,30 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
   styles: [`
     :host {
-        width: 100%;
+        width: 300px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    .note {
+      background-color: lightgray;
+      width: 100%
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      background-color: red;
+      padding: 10px;
+    }
+    .form-text {
+      color: white;
+      /* background-color: red; */
     }
     input {
       width: 100%;
@@ -18,10 +37,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       background-color: blue;
     } */
     div.actions {
-
+      text-align: center;
     }
     button {
-      background-color: darkblue;
+      background-color: red;
       color: white;
       margin-right: 20px;
     }
@@ -33,13 +52,20 @@ export class BenchmarkComponent implements OnInit {
 
   @Output() buttonClickedEvent = new EventEmitter<string>();
 
+  @ViewChild('zipInput') zipInput!: ElementRef<any>;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   buttonClicked(event: MouseEvent) {
-    this.buttonClickedEvent.emit('Angular button clicked');
+    const zip = this.zipInput.nativeElement.value;
+    this.buttonClickedEvent.emit('We are searching for pharmacies near zipcode' + zip + '. Please wait...');
+  }
+
+  clearZip() {
+    this.zipInput.nativeElement.value = '';
   }
 
 }

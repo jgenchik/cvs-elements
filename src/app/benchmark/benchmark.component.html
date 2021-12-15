@@ -2,12 +2,30 @@
 
     <h2>{{header}}</h2>
 
-    <input type="text">
+    <div class="content">
 
-    <div class="actions">
-        <button (click)="buttonClicked($event)">CLICK</button>
-        <a href="#">Link</a>
+        <div class="note">
+            PLEASE NOTE: Many of our in-network pharmacies are helping the givernment administer the COVID-19 vaccines,
+            including pharmacy chains and comunity pharmacies.
+        </div>
+
+        <div class="form">
+
+            <div class="form-text">
+                Please enter your zip code to find your nearest stores
+            </div>
+
+            <input type="number" #zipInput placeholder="Enter your zip code">
+
+        </div>
+
+        <div class="actions">
+            <button (click)="buttonClicked($event)">SEARCH</button>
+            <a src="#" (click)="clearZip()">Clear</a>
+        </div>
     </div>
+
+    
 
 </div>
 

@@ -14,13 +14,15 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
     }
     .note {
       background-color: lightgray;
-      width: 100%
+      width: 100%;
+      padding: 10px;
     }
     .form {
       display: flex;
       flex-direction: column;
       background-color: red;
       padding: 10px;
+      width: 100%;
     }
     .form-text {
       color: white;
@@ -43,6 +45,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
       background-color: red;
       color: white;
       margin-right: 20px;
+      padding: 10px;
     }
   `]
 })
@@ -61,7 +64,7 @@ export class BenchmarkComponent implements OnInit {
 
   buttonClicked(event: MouseEvent) {
     const zip = this.zipInput.nativeElement.value;
-    this.buttonClickedEvent.emit('We are searching for pharmacies near zipcode' + zip + '. Please wait...');
+    this.buttonClickedEvent.emit('We are searching for pharmacies near zipcode ' + zip + '. Please wait...');
   }
 
   clearZip() {

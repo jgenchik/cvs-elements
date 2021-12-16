@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CvsElements</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body style="width: 300px;">
+  <head>
+    <meta charset="utf-8">
+    <title>CvsElements</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body style="width: 300px;">
 
-  <h2>Element is below</h2>
+    <h2>Element is below</h2>
 
-  <angular-benchmark header="New Header"></angular-benchmark>
+    <angular-benchmark header="New Header"></angular-benchmark>
 
-</body>
+    <script>
+      document.querySelector('angular-benchmark').addEventListener("buttonClickedEvent", (val) => {
+        console.log("clicked", val);
+      });
+    </script>
+  </body>
 </html>

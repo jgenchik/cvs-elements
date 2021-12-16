@@ -16,13 +16,14 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
       background-color: lightgray;
       /* width: 100%; */
       padding: 10px;
+      border-radius: 7px 7px 0 0;
     }
     .form {
       display: flex;
       flex-direction: column;
       background-color: red;
       padding: 10px;
-      /* width: 100%; */
+      border-radius: 0 0 7px 7px;
     }
     .form-text {
       color: white;
@@ -46,6 +47,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
       color: white;
       margin-right: 20px;
       padding: 10px;
+      border-radius: 5px;
     }
   `]
 })

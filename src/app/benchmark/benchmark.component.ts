@@ -14,7 +14,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
     }
     .note {
       background-color: lightgray;
-      width: 100%;
+      /* width: 100%; */
       padding: 10px;
     }
     .form {
@@ -22,7 +22,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
       flex-direction: column;
       background-color: red;
       padding: 10px;
-      width: 100%;
+      /* width: 100%; */
     }
     .form-text {
       color: white;

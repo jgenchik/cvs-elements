@@ -13,7 +13,8 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
       row-gap: 10px;
     }
     .note {
-      background-color: lightgray;
+      /* background-color: lightgray; */
+      background-color: #F0F0F0;
       /* width: 100%; */
       padding: 10px;
       border-radius: 7px 7px 0 0;
